@@ -80,14 +80,6 @@ The plugin uses scoreboards to track:
 - `gunz_ammo` - Current ammo count
 - `gunz_magazines` - Available magazines
 
-## Building
-
-Requirements:
-- Java 17+
-- Maven
-
-The compiled JAR will be in the `target` folder.
-
 ## Support
 
 For issues and feature requests, please create new issue.
