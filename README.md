@@ -1,6 +1,6 @@
 # GunzAPI - Advanced Weapon System Plugin
 
-A comprehensive weapon system plugin for Minecraft 1.20.4 (If U Want Another Version Create New Issue) that allows custom weapons based on CustomModelData with advanced features. Supports multiple weapons per material using dot notation (e.g., CARROT_ON_A_STICK.1, CARROT_ON_A_STICK.2).
+A comprehensive weapon system plugin for Minecraft 1.20.4 (If U Want Another Version Create New Issue) that allows custom weapons based on CustomModelData with advanced features. Supports multiple weapons per material using give_name.
 
 ## Features
 
@@ -46,9 +46,9 @@ MATERIAL_NAME.ID:
 ### Example Weapons
 
 The plugin comes with example weapons using dot notation:
-- **CARROT_ON_A_STICK.1** (Pistol): Semi-auto, short range
-- **CARROT_ON_A_STICK.2** (Assault Rifle): Full-auto, medium range
-- **CARROT_ON_A_STICK.3** (Sniper Rifle): Semi-auto, long range with custom sounds
+- **Pistol** (Pistol): Semi-auto, short range
+- **Assault Rifle** (Assault Rifle): Full-auto, medium range
+- **Sniper Rifle** (Sniper Rifle): Semi-auto, long range with custom sounds
 
 Multiple weapons can share the same material with different IDs for organization.
 
@@ -66,9 +66,8 @@ Multiple weapons can share the same material with different IDs for organization
 
 - `/gunz reload` - Reload configuration
 - `/gunz help` - Show help message
-- `/gunz give <player> <material> <id>` - Give weapon by material and ID
-  - Example: `/gunz give @s carrot_on_a_stick 1` - Gives CARROT_ON_A_STICK.1 weapon
-  - Example: `/gunz give @s carrot_on_a_stick 2` - Gives CARROT_ON_A_STICK.2 weapon
+- `/gunz give <player> <give_name>` - Give weapon by give_name
+  - Example: `/gunz give @s pistol` - Gives PAPER.1 weapon
 
 ## Custom Sounds
 
