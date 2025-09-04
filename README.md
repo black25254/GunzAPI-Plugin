@@ -1,6 +1,6 @@
 # GunzAPI - Advanced Weapon System Plugin
 
-A comprehensive weapon system plugin for Minecraft 1.20.4 that allows custom weapons based on CustomModelData with advanced features.
+A comprehensive weapon system plugin for Minecraft 1.20.4 (If U Want Another Version Create New Issue) that allows custom weapons based on CustomModelData with advanced features. Supports multiple weapons per material using dot notation (e.g., CARROT_ON_A_STICK.1, CARROT_ON_A_STICK.2).
 
 ## Features
 
@@ -27,7 +27,7 @@ A comprehensive weapon system plugin for Minecraft 1.20.4 that allows custom wea
 ### gunz.yml Structure
 
 ```yaml
-MATERIAL_NAME:
+MATERIAL_NAME.ID:
   custom_model_data: 1                    # Normal weapon model
   shift-custom_model_data: 2              # Scoped weapon model
   shift_slow: 1                           # Movement slowdown when scoped (1 = half speed)
@@ -45,10 +45,12 @@ MATERIAL_NAME:
 
 ### Example Weapons
 
-The plugin comes with three example weapons:
-- **PAPER** (Pistol): Semi-auto, short range
-- **IRON_SWORD** (Assault Rifle): Full-auto, medium range
-- **STICK** (Sniper Rifle): Semi-auto, long range with custom sounds
+The plugin comes with example weapons using dot notation:
+- **CARROT_ON_A_STICK.1** (Pistol): Semi-auto, short range
+- **CARROT_ON_A_STICK.2** (Assault Rifle): Full-auto, medium range
+- **CARROT_ON_A_STICK.3** (Sniper Rifle): Semi-auto, long range with custom sounds
+
+Multiple weapons can share the same material with different IDs for organization.
 
 ## Usage
 
@@ -64,7 +66,9 @@ The plugin comes with three example weapons:
 
 - `/gunz reload` - Reload configuration
 - `/gunz help` - Show help message
-- `/gunz give` - Gives any gun u put in **gunz.yml** file u want
+- `/gunz give <player> <material> <id>` - Give weapon by material and ID
+  - Example: `/gunz give @s carrot_on_a_stick 1` - Gives CARROT_ON_A_STICK.1 weapon
+  - Example: `/gunz give @s carrot_on_a_stick 2` - Gives CARROT_ON_A_STICK.2 weapon
 
 ## Custom Sounds
 
@@ -81,10 +85,6 @@ The plugin uses scoreboards to track:
 Requirements:
 - Java 17+
 - Maven
-
-```bash
-mvn clean package
-```
 
 The compiled JAR will be in the `target` folder.
 
